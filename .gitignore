@@ -1,0 +1,37 @@
+# ─────────────────────────────────────────────────────────────────────
+#  SECRETS — NE JAMAIS COMMITER
+#  .env contient PRIVATE_KEY (= ton wallet) et TELEGRAM_BOT_TOKEN
+#  (= contrôle total du bot). Un push public = wallet vidé en minutes.
+# ─────────────────────────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# ── Données (volumineuses : market_data.db grossit de ~0.5 Go/JOUR) ──
+data/
+*.db
+*.db-wal
+*.db-shm
+*.db-journal
+*.log
+*.pid
+*.csv
+
+# ── Archive locale (filet de sécurité, pas à publier : ~60 Mo) ───────
+archive/
+
+# ── Python ──────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# ── Divers ──────────────────────────────────────────────────────────
+*.exe
+.DS_Store
+.vscode/
+.idea/
